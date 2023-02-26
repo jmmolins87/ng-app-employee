@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="card-body d-flex justify-content-start align-items-center">
+        <div class="form-check form-check-inline d-flex justify-content-start align-items-center">
+            <input class="form-check-input" [(ngModel)]="radioButtonSelected" type="radio" name="sexo" id="todos"
+                value="Todos">
+            <label class="form-check-label" for="todos">Todos <span>({{ allEmployees }})</span></label>
+        </div>
+        <div class="form-check form-check-inline d-flex justify-content-start align-items-center">
+            <input class="form-check-input" [(ngModel)]="radioButtonSelected" type="radio" name="sexo" id="femenino"
+                value="Femenino">
+            <label class="form-check-label" for="femenino">Femenino <span>({{ allEmployeesFemales }})</span></label>
+        </div>
+        <div class="form-check form-check-inline d-flex justify-content-start align-items-center">
+            <input class="form-check-input" [(ngModel)]="radioButtonSelected" type="radio" name="sexo" id="masculino"
+                value="Masculino">
+            <label class="form-check-label" for="masculino">Masculino <span>({{ allEmployeesMales }})</span></label>
+        </div>
+    </div>
+</div>

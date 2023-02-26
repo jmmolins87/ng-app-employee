@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <app-count-employee 
+                [allEmployees]="getEmployeesList()" 
+                [allEmployeesMales]="getEmployeesListMale()"
+                [allEmployeesFemales]="getEmployeesListFemale()">
+            </app-count-employee>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Dossier</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Sexo</th>
+                                <th>Salario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <ng-container *ngFor="let employee of listEmployees; let i = index">
+                                <tr *ngIf="radioButtonSelected == 'Todos' || radioButtonSelected == employee.sex">
+                                    <th>{{ i + 1 }}</th>
+                                    <td>{{ employee.name }}</td>
+                                    <td>{{ employee.surname }}</td>
+                                    <td>{{ employee.sex }}</td>
+                                    <td>{{ employee.salary | currency }}</td>
+                                </tr>
+                            </ng-container>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
