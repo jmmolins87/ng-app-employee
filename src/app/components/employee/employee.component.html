@@ -4,7 +4,8 @@
             <app-count-employee 
                 [allEmployees]="getEmployeesList()" 
                 [allEmployeesMales]="getEmployeesListMale()"
-                [allEmployeesFemales]="getEmployeesListFemale()">
+                [allEmployeesFemales]="getEmployeesListFemale()"
+                (countRadioButtonChange)="countRadioButtonChange( $event )">
             </app-count-employee>
         </div>
     </div>

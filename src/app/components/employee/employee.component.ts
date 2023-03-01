@@ -35,10 +35,9 @@ export class EmployeeComponent implements OnInit {
     }
   ];
 
-  public radioButtonSelected: string;
+  public radioButtonSelected: string = 'Todos';
 
   constructor() {
-    this.radioButtonSelected = 'Todos'
   }
 
   ngOnInit(): void {
@@ -48,6 +47,7 @@ export class EmployeeComponent implements OnInit {
   getEmployeesListMale() { return this.listEmployees.filter( employee => employee.sex === 'Masculino' ).length; }
   getEmployeesListFemale() { return this.listEmployees.filter( employee => employee.sex === 'Femenino' ).length; }
 
-  // radioButtonSelected() {}
-
+  countRadioButtonChange( radioButtonSelect: string ):void {
+    this.radioButtonSelected = radioButtonSelect;
+  }
 }
